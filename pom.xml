@@ -68,6 +68,7 @@
                         <configuration>
                             <classifier>sb</classifier>
                         </configuration>
+                        <phase>package</phase>
                         <goals>
                             <goal>repackage</goal>
                         </goals>
@@ -116,7 +117,7 @@
                             </execution>
                             <execution>
                                 <id>copy-docker-resources2</id>
-                                <phase>package</phase>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>copy-resources</goal>
                                 </goals>
@@ -150,7 +151,7 @@
                         <executions>
                             <execution>
                                 <id>build-image</id>
-                                <phase>integration-test</phase>
+                                <phase>install</phase>
                                 <goals>
                                     <goal>build</goal>
                                 </goals>
